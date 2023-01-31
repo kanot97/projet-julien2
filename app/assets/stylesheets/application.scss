@@ -7,6 +7,60 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome";
 
+
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FFFFFF;
+}
+
+/* styles pour des écrans de largeur entre 992px et 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* styles pour des écrans de largeur entre 768px et 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+/* styles pour des écrans de largeur inférieure à 767px */
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+/* styles pour des écrans de largeur inférieure à 575px */
+@media only screen and (max-width: 575px) {
+  body {
+    font-size: 10px;
+  }
+}
+
+/* styles pour des écrans de largeur inférieure à 414px */
+@media only screen and (max-width: 414px) {
+  body {
+    font-size: 8px;
+  }
+}

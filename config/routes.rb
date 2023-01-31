@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
+  devise_for :users
   root to: "pages#home"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get 'contacts/index'
+  get 'feedbacks/index'
+  get 'discovers/index'
+  get 'propos/index'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :users do
+    resources :bookings, only: [:index, :show, :new, :create, :edit, :update, :destroy]
+  end
+  resources :massages, only: [:index, :show]
+  resources :coachings, only: [:index, :show]
 end

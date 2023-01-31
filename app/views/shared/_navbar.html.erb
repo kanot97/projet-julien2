@@ -1,0 +1,37 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+
+      <h1 class= "home-title">Bnfique</h1>
+       <div class="nav-1">
+    <ul class="list-inline tabs-underlined">
+      <li>
+        <%= link_to "Accueil", root_path, class: "tab-underlined active" %>
+      </li>
+      <li>
+        <%= link_to "Coachings", coachings_path, class: "tab-underlined active" %>
+      </li>
+      <li>
+        <%= link_to "Massages", massages_path, class: "tab-underlined active" %>
+      </li>
+      <li>
+        <%= link_to "A propos", propos_index_path, class: "tab-underlined active" %>
+      </li>
+      <li>
+        <%= link_to "Contact", contacts_index_path, class: "tab-underlined active" %>
+      </li>
+      <li>
+        <%= link_to "Notre équipe", discovers_index_path, class: "tab-underlined active" %>
+      </li>
+      <li>
+        <%= link_to "Témoignages", feedbacks_index_path, class: "tab-underlined active" %>
+      </li>
+    </ul>
+
+        <% if user_signed_in? %>
+          <%= button_to "Log out", destroy_user_session_path, method: :delete, class:"btn btn-flat" %>
+        <% else %>
+          <%= link_to "Login", new_user_session_path, class:"btn btn-flat" %>
+        <% end %>
+    </div>
+  </div>
+</div>

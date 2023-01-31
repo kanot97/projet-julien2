@@ -1,12 +1,64 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+.home-title{
+  display: flex;
+  font-size: 3rem;
+  color: #955251;
+  margin-top: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container-fluid{
+  display: flex;
+  flex-direction: column;
+}
+.nav-1{
+  display: flex;
+  gap: 2rem;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.navbar{
+  background: #F4F4F4;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin-bottom: 4rem;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.nav-link{
+  text-decoration: line-through;
+}
+.home{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 300px) {
+  .navbar-brand {
+    display: none;
+  }
+  .nav-1 {
+    display: none;
+  }
+  .navbar-collapse {
+    flex-direction: column;
+  }
+}
+
+.tabs-underlined {
+  display: flex;
+  align-items: center;
+}
+
+.tabs-underlined .tab-underlined {
+  color: black;
+  padding: 8px;
+  margin: 8px;
+  opacity: .4;
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: 4px solid transparent;
+}
+
+.tabs-underlined .tab-underlined.active {
+  opacity: 1;
+  border-bottom: 3px solid #555555;
 }
